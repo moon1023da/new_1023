@@ -1,0 +1,26 @@
+.search {
+    display: flex;
+    height: 48px;
+    border-radius: 48px;
+    border:1px solid $purple;
+    .search__btn {
+        // background: url("../img/zoom_ico.png") no-repeat center;
+        @include bg('zoom_ico.png', center);
+        width: 46px;
+        height: 46px;
+        border-radius: 100%;
+    }
+    input {
+        position: relative;
+        top:8px;
+        left:8px;
+        width: 345px;
+        height: 35px;
+        border-radius: 46px;
+        &::placeholder {
+            font-size: 17px;
+            color: $grey96;
+            line-height: 46px;
+        }
+    }
+}

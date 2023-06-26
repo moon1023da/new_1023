@@ -1,0 +1,64 @@
+.megamenu {
+    display: none;
+    position: fixed;
+    left:0;
+    right:0;
+    top:0;
+    bottom:0;
+    z-index: 1000;
+    background-color: $white;
+    nav {
+        padding: 58px 0 0;
+        a {
+            display: flex;
+            align-items: center;
+            padding: 0 20px;
+            height: 48px;
+            font-size: 14px;
+            color: $grey28;
+            &:hover,&:focus {
+                background-color: $greyf6;
+            }
+           
+        }
+        li{
+            &[data-last]{
+                position: relative;
+                margin-bottom: 10px;
+                &::after{
+                    content:'';
+                    @include position(left, 0, bottom, 0);
+                    width: 100%;
+                    border-bottom: 1px solid $greye7;
+                }
+            }
+            &.bold a{
+                color: $black;
+                font-weight: 700;
+                
+            }
+        }
+    }
+    .btn-close {
+        @include position(right, 0, top, 0)
+    }
+}
+
+.app {
+    display: grid;
+    grid-template-columns: 74px 1fr;
+    gap: 15px 9px;
+    padding: 10px 20px 20px;
+    &__txt {
+        grid-column: 1 / 3;
+        font-size: 13px;
+        color: $grey6f;
+        display: flex;
+        padding: 0 0 15px;
+        span{
+            margin-left:6px;
+        }
+        
+        
+    }
+}

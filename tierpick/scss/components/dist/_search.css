@@ -1,0 +1,5 @@
+.search {
+  height: 48px;
+  border-radius: 48px;
+  border: 1px solid var(--purple);
+}

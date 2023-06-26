@@ -1,0 +1,96 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 48px 40px 0;
+    margin-bottom: 15px;
+    @include mobile {
+        padding: 0 15px;
+    }
+    .logo {
+        font-size: 0;
+    }
+    .header__nav {
+        display: flex;
+        align-items: center;
+        gap:40px;
+        @include mobile{
+            display: none;
+        }
+    }
+}
+
+.spot-menu {
+    @include position(left, 0, top, 0);
+    width: 100%;
+    padding: 0 40px;
+    box-sizing: border-box;
+    border-bottom: 1px solid $greye7;
+    @include mobile{
+        position: static;
+        border: none;
+        padding: 0;
+        a, button{
+            width: 45px;
+            height: 56px;
+        }
+        .hidden{
+            display: none;
+        }
+        .spot-menu__cart a{
+            @include bg('cart_ico.png', center);
+        }
+        .spot-menu__mypage a{
+            @include bg('mypage_ico.png', center);
+        }
+        span {
+            @include hide;
+        }
+    }
+    
+    nav {
+        display: flex;
+        justify-content: flex-end;
+
+        ul {
+            display: flex;
+    
+            li {
+                display: flex;
+                align-items: center;
+                line-height: 30px;
+                a{
+                    font-size: 14px;
+                    color: $grey6f;
+                }
+                @include mobile {
+                    height: auto;
+                }
+
+            }
+            li + li::before{
+            content:'';
+            border: 1px solid $greydd;
+            height: 10px;
+            margin: 0 40px;
+            background-color: $greydd;
+            @include mobile {
+                display: none;
+            }
+           
+        }
+        [aria-hidden] {
+            display: none;
+            @include mobile{
+                display: flex;
+                button{
+                    @include bg('../../img/m_menu_ico.png', center);
+                }
+                
+            }
+        }
+        } 
+        
+    }
+    
+}

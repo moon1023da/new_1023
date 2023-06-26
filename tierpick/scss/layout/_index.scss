@@ -1,0 +1,162 @@
+//즐겨찾는 메뉴
+@mixin favoriteBorder{
+    border: 1px solid $greye7;
+    @include mobile {
+        border: none;
+        a {
+            background-color: $greyec;
+        }
+        
+    }
+}
+
+@mixin favoriteBackground($color){
+    background-color: $color;
+    a{
+        @include mobile{
+            background-color: $color;
+        }
+    }
+    
+
+    @content;
+    
+}
+
+.favorite-nav {
+   @extend %layout-center;
+    margin-top:60px;
+    ul{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap:30px 24px; 
+
+        @include mobile {
+            grid-template-columns: repeat(5, 1fr);
+            gap: 20px;
+        }
+        @include mobileMini {
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px; 
+        }
+    }
+
+    li{
+        box-shadow: 1px 1px 3px rgba($black, 0.1);
+        border-radius: 15px;
+        height: 120px;
+
+        @include mobile {
+            height: auto;
+            border-radius: 0;
+            box-shadow: none;
+            
+            .only-mobile {
+                text-align: center;
+                font-size: 14px;
+                color: $grey5a;
+            }
+        }
+    }
+
+    a {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 0 30px;
+        line-height: 1;
+        gap: 12px;
+        border-radius: 15px;
+        height: 120px;
+        box-sizing: border-box;
+
+        @include mobile {
+            width: 112px;
+            height: 112px;
+            margin: 0 auto;
+            padding: 0;
+            border-radius: 36px;
+        }
+    }
+
+    @for $i from 1 to 9 {
+        &__ico#{$i} {
+            a{
+                @include bg(
+                    "main_ico_" + $i + ".svg", 
+                    right 40px, 
+                    center, 
+                    null, 
+                    40px, 
+                    auto
+                );
+                @include mobile {
+                    background-position: center;
+                }
+            }
+        }
+    }
+
+    &__ico1,
+    &__ico2,
+    &__ico3 {
+        @include favoriteBorder();
+    }
+
+    &__ico4 {
+        @include favoriteBackground(#eebdee) {
+            @include mobile {
+        background-color: transparent;
+            }
+        }
+    }
+
+    &__ico5 {
+        @include favoriteBackground(#e6f2ff) {
+            @include mobile {
+        background-color: transparent;
+            }
+        }
+    }
+
+    &__ico6 {
+        @include favoriteBackground(#d6ebe0) {
+            @include mobile {
+        background-color: transparent;
+            }
+        }
+    }
+
+    &__ico7 {
+        @include favoriteBackground(#d1d6ff) {
+            @include mobile {
+        background-color: transparent;
+            }
+        }
+    }
+
+    &__ico8 {
+        @include favoriteBackground(#ffebeb) {
+            @include mobile {
+        background-color: transparent;
+            }
+        }
+    }
+
+    &__txt-sub {
+        font-size: 14px;
+        color: $grey6f;
+        @include mobile {
+            display: none;
+        }
+    }
+    &__txt-main {
+        font-size: 25px;
+        color: $black;
+        @include mobile {
+            display: none;
+        }
+    } 
+    
+}
+

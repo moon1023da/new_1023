@@ -1,0 +1,11 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+.header .logo {
+  padding: 0 40px;
+}
+
+.spot-menu {
+  display: none;
+}

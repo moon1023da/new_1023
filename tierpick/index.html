@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="타이어웹사이트 클론코딩">
+    <meta name="keywords" content="타이어">
+    <meta name="author" content="moon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>타이어픽</title>
+    <link rel="stylesheet" href="./scss/style.css">
+    <script src="http://code.jquery.com/jquery-latest.js"></script> 
+    <script src="js/global.js"></script>
+</head>
+<body>
+    <div class="wrap">
+        <header class="header">
+            <h1 class="logo">
+                <a href="">
+                    <img src="./img/h1_img.png" alt="타이어픽">
+                </a>
+            </h1>
+            <div class="header__nav">
+                <h2 class="hide">검색</h2>
+                <div class="search">
+                    <input type="search" placeholder="차량번호/ 상품명/ 사이즈검색" title="검색어 입력">
+                    <button class="search__btn" aria-label="검색"></button>
+                </div>
+                <h2 class="hide">메뉴</h2>
+                <nav class="gnb">
+                    <ul>
+                        <li><a href="">타이어</a></li>
+                        <li><a href="">엔진오일</a></li>
+                        <li><a href="">배터리</a></li>
+                        <li><a href="">매장</a></li>
+                        <li><a href="">이벤트</a></li>
+                        <li><a href="">고객센터</a></li>
+                    </ul>
+                </nav> 
+            </div>
+
+            <div class="spot-menu">
+                <nav>
+                    <ul>
+                        <li class="hidden"><a href="">이용안내</a></li>
+                        <li class="spot-menu__cart"><a href=""><span>장바구니</span></a></li>
+                        <li class="spot-menu__mypage"><a href=""><span>마이페이지</span></a></li>
+                        <li aria-hidden="true"><button class="btn-megamenu"><span>전체메뉴</span></button></li>
+                        <li class="hidden"><a href="">로그인</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <aside class="megamenu">
+            <nav>
+                <ul>
+                    <li data-last><a href="">로그인</a></li>
+                    <li class="bold"><a href="">타이어</a></li>
+                    <li class="bold"><a href="">배터리</a></li>
+                    <li class="bold"><a href="">이벤트</a></li>
+                    <li class="bold" data-last><a href="">고객센터</a></li>
+                    <li><a href="">마이페이지</a></li>
+                    <li><a href="">장바구니</a></li>
+                    <li><a href="">장착점</a></li>
+                    <li><a href="">제휴신청</a></li>
+                    <li><a href="">이용안내</a></li>
+                </ul>
+            </nav>
+            <div class="app">
+                <div class="app__txt">
+                    타이어픽 앱 설치하면 <span class="txt-purple">세차가 100원!</span>
+                </div>
+                <a href=""><img src="./img/apple_store_ico.png" alt="앱스토어"></a>
+                <a href=""><img src="./img/google_store_ico.png" alt="구글플레이"></a>
+            </div>
+            <button class="btn-close" aria-label="닫기"></button>
+        </aside>
+
+    </div>
+
+    <main>
+        <section class="swiper visual">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">1</div>
+              <div class="swiper-slide">2</div>
+              <div class="swiper-slide">3</div>
+              <div class="swiper-slide">4</div>
+              <div class="swiper-slide">5</div>
+              <div class="swiper-slide">6</div>
+            </div>
+            <div class="visual__paging"></div>
+            <div class="visual__paging__mobile"></div>
+          </section>
+
+          <section class="favorite-nav">
+            <ul>
+                <li class="favorite-nav__ico1">
+                    <a href="">
+                        <span class="favorite-nav__txt-sub">방구석에서 장착 가능</span>
+                        <b class="favorite-nav__txt-main">타이어 교체</b>
+                    </a>
+                    <div class="only-mobile">타이어</div>
+                </li>
+                <li class="favorite-nav__ico2">
+                    <a href="">
+                        <span class="favorite-nav__txt-sub">새벽에 방전돼도 문제없이</span>
+                        <b class="favorite-nav__txt-main">배터리 장착</b>
+                    </a>
+                    <div class="only-mobile">배터리</div>
+                </li>
+                <li class="favorite-nav__ico3">
+                    <a href="">
+                        <span class="favorite-nav__txt-sub">전국 600개 국내 최다</span>
+                        <b class="favorite-nav__txt-main">장착점 찾아보기</b>
+                    </a>
+                    <div class="only-mobile">장착점</div>
+                </li>
+                <li class="favorite-nav__ico4">
+                    <a href="">
+                        <span class="favorite-nav__txt-sub">새해 이벤트</span>
+                        <b class="favorite-nav__txt-main">5천원 더!</b>
+                    </a>
+                    <div class="only-mobile">이벤트</div>
+                </li>
+                <li class="favorite-nav__ico5">
+                    <a href="">
+                        <span class="favorite-nav__txt-sub">첫 구매 혜택</span>
+                        <b class="favorite-nav__txt-main">세차 100원</b>
+                    </a>
+                    <div class="only-mobile">세차100원</div>
+                </li>
+                <li class="favorite-nav__ico6">
+                    <a href="">
+                        <span class="favorite-nav__txt-sub">100% 당첨</span>
+                        <b class="favorite-nav__txt-main">리뷰 이벤트</b>
+                    </a>
+                    <div class="only-mobile">리뷰</div>
+                </li>
+                <li class="favorite-nav__ico7">
+                    <a href="">
+                        <span class="favorite-nav__txt-sub">보험료 조회하면</span>
+                        <b class="favorite-nav__txt-main">1만원 쿠폰</b>
+                    </a>
+                    <div class="only-mobile">쿠폰</div>
+                </li>
+                <li class="favorite-nav__ico8">
+                    <a href="">
+                        <span class="favorite-nav__txt-sub">파이어스톤</span>
+                        <b class="favorite-nav__txt-main">파손보증</b>
+                    </a>
+                    <div class="only-mobile">파손보증</div>
+                </li>
+            </ul>
+          </section>
+
+          <section class="product-md">
+            <div class="align both vm mt65">
+                <h2 class="h2">MD추천</h2>
+                <a href="" class="btn-more">더보기</a>
+            </div>
+            
+            <div class="swiper mt35 md-slide">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <a href="" class="product">
+                            <figure>
+                                <div class="product__thumb">
+                                    <img src="img/tire_01.png" class="product__thumb__image"/>
+                                    <img src="img//nexen_logo.png" alt="브랜드" class="product__thumb__mark"/>
+                                </div>
+                                <figcaption>
+                                    <div class="product__brand mt16">
+                                        <span class="hide">브랜드</span>금호
+                                    </div>
+                                    <div class="product__title mt12">
+                                        <span class="hide">제품명</span>HP71
+                                    </div>
+                                    <div class="product__size mt12">
+                                        <span class="hide">크기</span>225/
+                                        <span class="hide">지름 및 공기압</span>55R23(DP)DFKSS
+                                    </div>
+                                    <div class="product__priceinfo mt12">
+                                        <div class="product__sale">
+                                            <span class="hide">할인율</span> 48% 
+                                        </div>
+                                        <div class="product__price">
+                                            <span class="hide">판매가</span>500,000,000원
+                                        </div>
+                                    </div>
+                                    <div class="product__hash mt12">
+                                        <span class="hide">해시태그(용도별)</span>
+                                        <span>사계절용</span> 
+                                        <span>SUV</span> 
+                                        <span>고급형</span>
+                                    </div>
+                                    <div class="product__rating mt16"> 
+                                        <span class="hide">별점</span>
+                                        <span class="rating">4.6</span>
+                                        <span class="count">(7,841)</span>
+                                    </div>  
+                                </figcaption>
+                            </figure>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="" class="product">
+                            <figure>
+                                <div class="product__thumb">
+                                    <img src="img/tire_01.png" class="product__thumb__image"/>
+                                    <img src="img//nexen_logo.png" alt="브랜드" class="product__thumb__mark"/>
+                                </div>
+                                <figcaption>
+                                    <div class="product__brand mt16">
+                                        <span class="hide">브랜드</span>금호
+                                    </div>
+                                    <div class="product__title mt12">
+                                        <span class="hide">제품명</span>HP71
+                                    </div>
+                                    <div class="product__size mt12">
+                                        <span class="hide">크기</span>225/
+                                        <span class="hide">지름 및 공기압</span>55R23(DP)DFKWRWRFSSDFKWRWRFSS
+                                    </div>
+                                    <div class="product__priceinfo mt12">
+                                        <div class="product__sale">
+                                            <span class="hide">할인율</span> 48% 
+                                        </div>
+                                        <div class="product__price">
+                                            <span class="hide">판매가</span>500,000,000원
+                                        </div>
+                                    </div>
+                                    <div class="product__hash mt12">
+                                        <span class="hide">해시태그(용도별)</span>
+                                        <span>사계절용</span> 
+                                        <span>SUV</span> 
+                                        <span>고급형</span>
+                                    </div>
+                                    <div class="product__rating mt16"> 
+                                        <span class="hide">별점</span>
+                                        <span class="rating">4.6</span>
+                                        <span class="count">(7,841)</span>
+                                    </div>  
+                                </figcaption>
+                            </figure>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="" class="product">
+                            <figure>
+                                <div class="product__thumb">
+                                    <img src="img/tire_01.png" class="product__thumb__image"/>
+                                    <img src="img//nexen_logo.png" alt="브랜드" class="product__thumb__mark"/>
+                                </div>
+                                <figcaption>
+                                    <div class="product__brand mt16">
+                                        <span class="hide">브랜드</span>금호
+                                    </div>
+                                    <div class="product__title mt12">
+                                        <span class="hide">제품명</span>HP71
+                                    </div>
+                                    <div class="product__size mt12">
+                                        <span class="hide">크기</span>225/
+                                        <span class="hide">지름 및 공기압</span>55R23(DP)DFKSS
+                                    </div>
+                                    <div class="product__priceinfo mt12">
+                                        <div class="product__sale">
+                                            <span class="hide">할인율</span> 48% 
+                                        </div>
+                                        <div class="product__price">
+                                            <span class="hide">판매가</span>500,000,000원
+                                        </div>
+                                    </div>
+                                    <div class="product__hash mt12">
+                                        <span class="hide">해시태그(용도별)</span>
+                                        <span>사계절용</span> 
+                                        <span>SUV</span> 
+                                        <span>고급형</span>
+                                    </div>
+                                    <div class="product__rating mt16"> 
+                                        <span class="hide">별점</span>
+                                        <span class="rating">4.6</span>
+                                        <span class="count">(7,841)</span>
+                                    </div>  
+                                </figcaption>
+                            </figure>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="" class="product">
+                            <figure>
+                                <div class="product__thumb">
+                                    <img src="img/tire_01.png" class="product__thumb__image"/>
+                                    <img src="img//nexen_logo.png" alt="브랜드" class="product__thumb__mark"/>
+                                </div>
+                                <figcaption>
+                                    <div class="product__brand mt16">
+                                        <span class="hide">브랜드</span>금호
+                                    </div>
+                                    <div class="product__title mt12">
+                                        <span class="hide">제품명</span>HP71
+                                    </div>
+                                    <div class="product__size mt12">
+                                        <span class="hide">크기</span>225/
+                                        <span class="hide">지름 및 공기압</span>55R23(DP)DFKSS
+                                    </div>
+                                    <div class="product__priceinfo mt12">
+                                        <div class="product__sale">
+                                            <span class="hide">할인율</span> 48% 
+                                        </div>
+                                        <div class="product__price">
+                                            <span class="hide">판매가</span>500,000,000원
+                                        </div>
+                                    </div>
+                                    <div class="product__hash mt12">
+                                        <span class="hide">해시태그(용도별)</span>
+                                        <span>사계절용</span> 
+                                        <span>SUV</span> 
+                                        <span>고급형</span>
+                                    </div>
+                                    <div class="product__rating mt16"> 
+                                        <span class="hide">별점</span>
+                                        <span class="rating">4.6</span>
+                                        <span class="count">(7,841)</span>
+                                    </div>  
+                                </figcaption>
+                            </figure>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+
+          </section>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+</body>
+</html>

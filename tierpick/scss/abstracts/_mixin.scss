@@ -1,0 +1,59 @@
+//Position
+@mixin position($x, $xvalue, $y, $yvalue) {
+    position: absolute;
+    #{$x}: $xvalue;
+    #{$y}: $yvalue;
+    @if $xvalue == 50% and $yvalue == 50% {
+        transform:  translate(-50%, -50%);
+    }@else if  $xvalue == 50% {
+        transform: translate(-50%);
+    }@else if  $yvalue == 50% {
+        transform: translate(-50%);
+    }
+
+}
+
+
+// 반응형
+@mixin mobile{
+    @media (min-width: 0px) and (max-width: $web) {
+        @content;
+    }
+}
+
+@mixin mobileMini{
+    @media (min-width: 0px) and (max-width: $mobile) {
+        @content;
+    }
+}
+
+
+@mixin hide {
+    overflow: hidden;
+    display: block;
+    position: absolute;
+    border: 0;
+    width: 1px;
+    height: 1px;
+    clip: rect(1px, 1px, 1px, 1px);
+}
+
+/*파일명, x,Y축, 색상, 가로, 세로*/
+@mixin bg($fileName, 
+$x:null, 
+$y:null, 
+$color:null, 
+$width:null, 
+$height:null
+){
+    background: url(#{$imgUrl}#{$fileName}) no-repeat $x $y $color;
+    background-size: $width $height;
+}
+// 말줄임표
+@mixin ellipse {
+    display: block;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}

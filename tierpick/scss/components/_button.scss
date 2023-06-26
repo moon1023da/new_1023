@@ -1,0 +1,15 @@
+.btn {
+    &-close{
+        @include bg("close_ico.png", center);
+        width:58px;
+        height: 58px;
+    }
+    &-more {
+        @include bg("caret-right.svg", right, center);
+        padding-right: 17px;
+        font-size: 14px;
+        color: $grey5a;
+        
+    }
+}
+

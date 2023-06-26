@@ -1,0 +1,78 @@
+.visual {
+    position: relative;
+    height: 500px;
+    background-color: $lightOrange;
+
+    @include mobile {
+        height: 425px;
+    }
+
+    &__paging{
+        @include position(left, 50%, bottom, 10px);
+        display: flex;
+        z-index: 1000;
+        background-color: rgba($white, 0.5);
+        border-radius: 8px;
+        padding: 4px;
+        white-space: nowrap;
+    }
+
+    &__paging__mobile {
+        @include mobile {
+            @include position(right, 20px, bottom, 10px);
+            display: flex;
+            font-size: 12px;
+            padding: 0 15px;
+            line-height: 20px;
+            background-color: $white;
+            border-radius: 20px;
+
+            .swiper-pagination-total{
+                &::after{
+                    content:'+';
+                    padding-left:5px;
+                }
+            }
+           
+        }
+    }
+    
+    button{
+        padding: 0 30px;
+        height: 30px;
+        border-radius: 5px;
+        background-color: transparent;
+        transition: background 0.2s;
+        color: $grey5a;
+        &[aria-current] {
+            background-color: $white;
+            box-shadow: 1px 1px 3px rgba($black, 0.1);
+            color: $black;
+        }
+    }
+}
+
+.md-slide {
+    .swiper-wrapper{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 25px;
+        @include mobile {
+            display: flex;
+            gap: 0;
+            .product{
+                width: 140px;
+                
+                &__thumb {
+                    height: 140px;
+                }
+                
+            }
+        }
+    }
+}
+
+
+
+
+
